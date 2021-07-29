@@ -1,0 +1,31 @@
+<section role="main">
+    <div class="custom_bg">
+      <div class="details-container">
+        <div style="padding: 0;background: transparent;">
+          <mat-grid-list cols="6" rowHeight="600px" gutterSize="0">
+            <mat-grid-tile colspan="2" gutterSize="0">
+              <img src="https://image.tmdb.org/t/p/w500{{MovieDetails.poster_path}}" class="details-poster"
+                alt="{{MovieDetails.title}}" />
+            </mat-grid-tile>
+            <mat-grid-tile colspan="4">
+              <mat-card-content class="details-info">
+                <mat-card-title>
+                  <h2 class="movie-title">{{MovieDetails.original_title}}</h2>
+                </mat-card-title>
+                <mat-card-title>
+                  <ul class="movie-actions">
+                    <li>
+                      <a class="play-video" (click)="openDialog()">
+                        <mat-icon aria-hidden="false" aria-label="Star"></mat-icon>
+                        Bande Annonce
+                      </a>
+                    </li>
+                  </ul>
+                </mat-card-title>
+              </mat-card-content>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+      </div>
+    </div>
+</section>

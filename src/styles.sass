@@ -1,0 +1,194 @@
+
+
+
+.hub-page .hub-header 
+    background-color: rgb(147, 39, 132)
+    position: relative
+    color: rgb(255, 255, 255) 
+body
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  margin: 0
+  padding: 0
+  height: auto
+  -ms-overflow-style: -ms-autohiding-scrollbar
+  background-color: #fff
+  color: #000
+  font-display: auto
+  font-family: 'Source Sans Pro', Arial, sans-serif
+  font-size: 1em
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  scroll-behavior: smooth !important
+  overscroll-behavior-y: none
+  -webkit-overflow-scrolling: touch
+  webkit-app-region: no-drag
+  overflow-x: hidden
+
+::-webkit-scrollbar
+  display: none
+
+router-outlet ~ *
+  position: absolute
+  height: 100%
+  width: 100%
+
+.content
+  display: flex
+  margin: 32px auto
+  padding: 0 16px
+  max-width: 100%
+  flex-direction: column
+  align-items: center
+
+.container
+  margin: 0 auto
+  width: 100%
+  display: grid
+  grid-template-areas: "header header" "side content"
+  grid-template-rows: auto auto
+  grid-row-gap: 16px
+  grid-column-gap: 16px
+  grid-column: 150px calc(90vw - 150px)
+
+\:host
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-size: 14px
+  color: #333
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.circle-content
+  position: absolute
+  width: 60px
+  height: 60px
+  top: 0
+  color: white
+  display: flex
+  justify-content: center
+  align-items: center
+
+  sup
+    font-size: 0.5rem
+
+.card-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 16px
+
+a
+  color: black
+  text-decoration: none
+
+  &:visited
+    color: #1976d2
+    text-decoration: none
+
+  &:hover
+    color: #1976d2
+    text-decoration: none
+    color: #125699
+
+.icon-outline
+  border: 2px solid #ffffff
+  box-sizing: border-box
+  background: rgba(0, 0, 0, 0.2)
+  border-radius: 50%
+  width: 46px
+  height: 46px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  align-content: center
+  color: #ffffff
+  -webkit-transition: background-color 1s ease-out
+  -moz-transition: background-color 1s ease-out
+  -o-transition: background-color 1s ease-out
+  transition: background-color 1s ease-out
+
+  &:hover
+    color: #321414
+    background-color: #ffffff
+    border-color: rgba(100%, 100%, 100%, 0.2)
+    cursor: pointer
+
+.circle-link
+  height: 40px
+  width: 40px
+  border-radius: 40px
+  margin: 8px
+  background-color: white
+  border: 1px solid #eeeeee
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+  transition: 1s ease-out
+
+  &:hover
+    transform: translateY(-0.25rem)
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
+
+footer
+  margin-top: 8px
+  display: flex
+  align-items: center
+  line-height: 20px
+
+.high-rate circle
+  stroke: #21d07a !important
+
+.low-rate circle
+  stroke: #d2d531 !important
+
+.mat-progress-spinner::ng-deep circle
+  stroke: #d2d531
+
+.mat-grid-tile .mat-figure
+  justify-content: flex-start !important
+  align-items: flex-start !important
+  
+
+.mat-dialog-container
+  padding: 0 !important
+
+.fade-in
+  animation: fadein 2s
+  -moz-animation: fadein 2s
+  /* Firefox
+  -webkit-animation: fadein 2s
+  /* Safari and Chrome
+  -o-animation: fadein 2s
+/* Opera
+
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@-moz-keyframes fadein
+  /* Firefox
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@-webkit-keyframes fadein
+  /* Safari and Chrome
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@-o-keyframes fadein
+  /* Opera
+  from
+    opacity: 0
+  to
+    opacity: 1

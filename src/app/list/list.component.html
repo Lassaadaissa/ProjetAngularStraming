@@ -1,0 +1,41 @@
+<section class="content" role="main">
+  <mat-form-field appearance="outline" class="search-box">
+    <mat-label>Chercher un film</mat-label>
+    <input matInput class="form-control" [ngModel]="searchQuery"
+      (ngModelChange)="searchQuery = $event ; searchMovie($event)" placeholder="Entrer le nom du film...">
+  </mat-form-field>
+
+  <div class="hub-header">
+    <div class="gwrap">
+      <h1>Film en français et en anglais, streaming complet et gratuit</h1>
+      <p>Retrouvez les meilleurs films en français. Profitez de notre sélection de films offerts gratuitement pour (re)découvrir des classiques ou des films incontournables du cinéma d’auteur contemporain. De la grande comédie au film romantique, du film drôle au drame, du film d’action au péplum, vous trouverez le bonheur de découvrir ou de revoir un très bon film en français & anglais.</p>
+    </div>
+    </div>
+
+  <div class="container">
+    <mat-card *ngFor="let movie of Movies.results" style="padding: 0; height: 280px" routerLink="/movie-details/{{movie.id}}">
+      <mat-grid-list cols="5" rowHeight="280px" class="fade-in">
+        <mat-grid-tile colspan="2">
+          <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="movie-poster" alt="{{movie.title}}" />
+        </mat-grid-tile>
+        <mat-grid-tile colspan="3">
+          <mat-card-content style="top:100; position: absolute; padding: 30px">
+            <mat-card-header>
+              <mat-card-title>
+                <a mat-button routerLink="/movie-details/{{movie.id}}" class="movie-title">{{movie.title}}</a>
+              </mat-card-title>
+            </mat-card-header>
+
+          </mat-card-content>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card>
+    <mat-card *ngIf="noResult">
+      <mat-card-content>
+        <mat-card-header>
+          <h2>Désolé n'existe pas...</h2>
+        </mat-card-header>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
